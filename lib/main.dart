@@ -54,8 +54,26 @@ class _jsontotextfiledState extends State<jsontotextfiled> {
     // print('Response status: ${response.statusCode}');
     // print('Response body: ${response.body}');
 
-    for (int i = 0; i < listdata.length; i++) {
-      print("${listdata[i]["type"]}");
+    for (int index = 0; index < listdata.length; index++)
+    {
+
+      if (listdata[index]["type"] == "name") {
+        aaaaaaaaaaaaa = TextInputType.name;
+      } else if (listdata[index]["type"] == "address") {
+        aaaaaaaaaaaaa = TextInputType.streetAddress;
+      } else if (listdata[index]["type"] == "email") {
+        aaaaaaaaaaaaa = TextInputType.emailAddress;
+      }
+      else if (listdata[index]["type"] == "date") {
+        aaaaaaaaaaaaa = TextInputType.datetime;
+      }
+      else if (listdata[index]["type"] == "number") {
+        aaaaaaaaaaaaa = TextInputType.number;
+      }
+
+setState(() {
+
+});
     }
 
     return listdata;
@@ -90,22 +108,6 @@ class _jsontotextfiledState extends State<jsontotextfiled> {
       body: ListView.builder(
         itemCount: listdata.length,
         itemBuilder: (context, index) {
-
-          if (listdata[index]["type"] == "name") {
-            aaaaaaaaaaaaa = TextInputType.name;
-          } else if (listdata[index]["type"] == "address") {
-            aaaaaaaaaaaaa = TextInputType.streetAddress;
-          } else if (listdata[index]["type"] == "email") {
-            aaaaaaaaaaaaa = TextInputType.emailAddress;
-          }
-          else if (listdata[index]["type"] == "date") {
-            aaaaaaaaaaaaa = TextInputType.datetime;
-          }
-          else if (listdata[index]["type"] == "number") {
-            aaaaaaaaaaaaa = TextInputType.number;
-          }
-
-
 
           return Column(
             mainAxisAlignment: MainAxisAlignment.start,
