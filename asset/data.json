@@ -1,0 +1,32 @@
+
+
+
+[
+  {
+    "name": "Enter Your name",
+    "type": "name"
+  },
+  {
+
+    "name": "Enter Your number",
+      "type": "number"
+  },
+  {
+
+    "name": "Enter Your city",
+    "type": "name"
+  },
+  {
+
+    "name": "Enter Your address",
+    "type": "address"
+  },
+  {
+    "name": "Enter Your email",
+    "type": "email"
+  },
+  {
+    "name": "Enter Your birth date",
+    "type": "date"
+  }
+]
